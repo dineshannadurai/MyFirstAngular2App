@@ -1,0 +1,29 @@
+<h1>TT</h1>
+
+<div class="rightthumbnail">
+    <div class="thumbnailtest" *ngFor="let thumbnail of thumbnails; let index = index; let first = first; let last = last;let even = even;let odd = odd;" [id]='"r_"+ index'>
+        <svg class="svgright">
+            <svg:path *ngFor="let path of paths" [attr.d]="path.d" [attr.fill]="path.fill" [attr.stroke]="path.stroke" [attr.stroke-width]="path.strokewidth" />
+            <svg:path *ngFor="let quadrant of quadrants" [attr.d]="quadrant.d" [attr.fill]="quadrant.fill" [attr.stroke]="quadrant.stroke" [attr.id]='"r"+quadrant.id+index' />
+            <svg:circle [attr.cx]="circle.x" [attr.cy]="circle.y" [attr.r]="circle.r" [attr.fill]="circle.fill" [attr.stroke-width]="circle.strokewidth" [attr.stroke]="circle.stroke" />
+        </svg>
+        <div class="thumbindi">
+            <div class="displayvalues">{{index}}</div>
+            <div class="displayvalues">{{index}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="leftthumbnail">
+    <div class="thumbnailtest" *ngFor="let thumbnail of thumbnails; let index = index; let first = first; let last = last;let even = even;let odd = odd;" [id]='"l_"+ index'>
+        <svg class="svgleft">
+            <svg:path *ngFor="let path of paths" [attr.d]="path.d" [attr.fill]="path.fill" [attr.stroke]="path.stroke" [attr.stroke-width]="path.strokewidth" />
+            <svg:path *ngFor="let quadrant of quadrants" [attr.d]="quadrant.d" [attr.fill]="quadrant.fill" [attr.stroke]="quadrant.stroke" [attr.id]='"l"+quadrant.id+index' />
+            <svg:circle [attr.cx]="circle.x" [attr.cy]="circle.y" [attr.r]="circle.r" [attr.fill]="circle.fill" [attr.stroke-width]="circle.strokewidth" [attr.stroke]="circle.stroke" />
+        </svg>
+        <div class="thumbindi">
+            <div class="displayvalues">{{index}}</div>
+            <div class="displayvalues">{{index}}</div>
+        </div>
+    </div>
+</div>
